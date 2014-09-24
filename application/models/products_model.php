@@ -13,11 +13,11 @@ class Products_model extends CI_Model {
   * * Sort by Category; for each Category sort product sales from highest to
   *   lowest sales
   */
-  function get_quota_sales($year) {
+  function get_quota_sales($year, $quota) {
     $query_string =
       'SELECT "ProductID", "ProductName"
       FROM products';
-    $quota_sales = $this->db->query($query_string, array($year));
+    $quota_sales = $this->db->query($query_string, array($year, $quota));
     return $quota_sales;
   }
 

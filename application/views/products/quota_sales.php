@@ -28,9 +28,15 @@
         <i class="calendar icon"></i>
       </div>
     </div>
-    <input class="ui submit button field" type="submit"
-    value="View Products"/>
+    <div class="inline field">
+      <div class="ui left labeled icon input">
+        <input id="quota" name="quota" placeholder="Enter Quota" type="text"/>
+        <i class="money icon"></i>
+      </div>
+    </div>
   </div>
+  <input class="ui submit button field" type="submit"
+  value="View Products"/>
 
 <?php echo form_close(); ?>
 

@@ -47,7 +47,6 @@ This is one of the hardest parts of the problem set.
 
 1. To be able to work on the problem set, you need to install the following:
 
-  * Apache Web Server
   * PHP5
   * PostgreSQL
   * php5-pgsql (php module for communicating with PostgreSQL databases)
@@ -71,14 +70,20 @@ particular, try to be familiar with the following:
   * The ```$db``` variable at /application/config/database.php.
 
 4. When you're already familiar with CodeIgniter, "make the project work."
-(Connect the project to the database and enable your web server to answer
-  requests that are directed to your project). When you're done with this, you
+  Connect the project to the database and enable your web server to answer
+  requests that are directed to your project. When you're done with this, you
   will be able to see something like
   [this](./home_page.png?raw=true "Home Page") when you are viewing your
   project on a web browser:
 
   ![Home Page](./home_page.png?raw=true "Home Page")
 
+  PHP has a built-in web server. To start the web server, just enter the
+  following on the terminal:
+
+  ```
+  php -S localhost:8000
+  ```
 ### SQL Queries
 
 As said earlier, your task is to provide the right SQL queries. The folder

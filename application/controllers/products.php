@@ -17,13 +17,14 @@ class Products extends CI_Controller {
   # Item 2
   public function quota_sales() {
     $year = $this->input->get('year');
+    $quota = $this->input->get('quota');
 
     $data = array('title' => 'Products');
-    if ($year) {
+    if ($year && $quota) {
       $data['caption'] =
-        'Products Exceeding Quota Sales for the year '.$year.'.';
+        'Products Exceeding the '.$quota.' Quota for the year '.$year.'.';
       $data['result'] = $this->table->generate(
-        $this->Products_model->get_quota_sales($year));
+        $this->Products_model->get_quota_sales($year,$quota));
     }
 
     $this->template->load('base','products/quota_sales',$data);
