@@ -26,11 +26,11 @@ class Partners_model extends CI_Model {
   * * Output: Company Name, City, Region,
   *   Relationship ("Customer" or "Supplier")
   */
-  function get_all_partners() {
+  function get_all_partners($country) {
     $query_string =
       'SELECT "CompanyName"
       FROM customers';
-    $all_partners = $this->db->query($query_string);
+    $all_partners = $this->db->query($query_string, array($country, $country));
     return $all_partners;
   }
 

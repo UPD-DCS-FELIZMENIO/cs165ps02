@@ -21,6 +21,8 @@ class Employees_model extends CI_Model {
   /*
   * Biggest Sale per Employee
   * * Output: Employee, Order ID, Customer, Order Amount, Order Date, Ship Date
+  * * Clue: An order is already shipped if ShippedDate is not null.
+  * * Sales = sum of unitprice * (1 - discount) * quantity per product ordered
   */
   function get_biggest_sale() {
     $query_string =
@@ -35,6 +37,7 @@ class Employees_model extends CI_Model {
   * * Given: year (e.g., 1995)
   * * Output: Employee, Sales
   * * Employee ranking must be from highest to lowest sales
+  * * Clue: You have to use SUM and ORDER BY
   */
   function get_rank_by_year($year) {
     $query_string =
